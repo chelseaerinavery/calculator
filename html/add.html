@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<h1>This is a calculator.</h1>
+<div>
+<a href="../index.html">HOME</a>
+<a href="./add.html">ADD</a>
+<a href="./subtract.html">SUBTRACT</a>
+<a href="./multiply.html">MULTIPLY</a>
+<a href="./divide.html">DIVIDE</a>
+</div>
+<div>
+<input id="firstNumber" type="number"> + <input id="secondNumber" type="number"> = <div id="solutionBox" type="number"></div>
+<button id="calculate">ADD</button>
+</div>
+
+</body>
+
+<script>
+
+var first = document.getElementById("firstNumber")
+var second = document.getElementById("secondNumber")
+var solution
+var solutionBox = document.getElementById("solutionBox")
+document.getElementById("calculate").addEventListener("click",function(){
+    solution = parseInt(first.value) + parseInt(second.value)
+    console.log("solution", solution)
+    solutionBox.innerHTML = solution
+})
+</script>
+
+</html>

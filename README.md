@@ -1,1 +1,1 @@
-# calculator
+No frills calculating. Practicing vanilla JS. 
