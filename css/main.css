@@ -69,6 +69,10 @@ a:hover {
   box-shadow: none;
 }
 
+#home {
+  background-color: #8eb0d4;
+}
+
 #add {
   background-color: #3da154;
 }
