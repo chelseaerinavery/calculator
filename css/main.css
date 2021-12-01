@@ -1,11 +1,86 @@
 body {
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+input {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  border-radius: 5px 5px 5px 5px;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea,
+input {
+  outline: none;
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.input-bar {
+  margin: 30px;
+}
+
+.operator {
+  display: inline-block;
+  width: 20px;
+  font-size: larger;
 }
 
 #solutionBox {
-    display: inline-block;
-    vertical-align: bottom;
-    height: 20px;
-    min-width: 150px;
-    border: 1px solid black;
+  display: inline-block;
+  background-color: white;
+  vertical-align: top;
+  font-size: 20px;
+  height: 26px;
+  min-width: 150px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#calculate {
+  display: block;
+  font-size: larger;
+  margin: 40px auto;
+  background-color: white;
+  width: 100px;
+  border-style: hidden;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 20%), 5px 5px 5px 0 rgb(0 0 0 / 19%);
+}
+
+#calculate:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+}
+
+#add {
+  background-color: #3da154;
+}
+
+#subtract {
+  background-color: #edac5a;
+}
+
+#multiply {
+  background-color: #b28aed;
+}
+
+#divide {
+  background-color: #3ec2ae;
 }

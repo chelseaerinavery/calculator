@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 <title>Calculator</title>
 <link rel="stylesheet" href="../css/main.css">
 </head>
 
-<body>
+<body id="multiply">
 
-<h1>This is a calculator.</h1>
+<h1>This is <span style='display:inline-block; text-decoration: underline;'>multiplication.</span></h1>
 <div>
-<a href="../index.html">HOME</a>
-<a href="./add.html">ADD</a>
-<a href="./subtract.html">SUBTRACT</a>
-<a href="./multiply.html">MULTIPLY</a>
-<a href="./divide.html">DIVIDE</a>
+    <a href="./add.html">add</a>
+    <a href="./subtract.html">subtract</a>
+    <a href="./multiply.html">multiply</a>
+    <a href="./divide.html">divide</a>
 </div>
-<div>
-<input id="firstNumber" type="number"> * <input id="secondNumber" type="number"> = <div id="solutionBox" type="number"></div>
-<button id="calculate">Multiply</button>
+<div class="input-bar"> 
+<input id="firstNumber" type="number"> <span class="operator">*</span> <input id="secondNumber" type="number"> = <div id="solutionBox" type="number"></div>
+<button id="calculate">multiply</button>
 </div>
 
 </body>
 
 <script>
 
-var first = document.getElementById("firstNumber")
-var second = document.getElementById("secondNumber")
-var solution
-var solutionBox = document.getElementById("solutionBox")
-document.getElementById("calculate").addEventListener("click",function(){
-    solution = parseInt(first.value) * parseInt(second.value)
-    console.log("solution", solution)
-    solutionBox.innerHTML = solution
-})
-</script>
+    var first = document.getElementById("firstNumber")
+    var second = document.getElementById("secondNumber")
+    var solution
+    var solutionBox = document.getElementById("solutionBox")
+    
+    document.getElementById("calculate").addEventListener("click",function(){
+        if (first.value.length>0 && second.value.length>0){
+        solution = parseInt(first.value) * parseInt(second.value)
+        solutionBox.innerHTML = solution
+        } else {
+            alert('please enter two numbers.')
+        }
+    })
+    
+    </script>
+    
 
 </html>
